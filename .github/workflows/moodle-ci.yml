@@ -81,6 +81,7 @@ jobs:
       - name: Install moodle-plugin-ci
         run: |
           moodle-plugin-ci add-plugin --branch master arcticfulmar/moodle-mod_hsuforum
+          moodle-plugin-ci add-plugin --branch master open-lms-open-source/moodle-local_mr
           moodle-plugin-ci add-plugin --branch master open-lms-open-source/moodle-local_joulegrader
           moodle-plugin-ci install --plugin ./plugin --db-host=127.0.0.1
         env:
