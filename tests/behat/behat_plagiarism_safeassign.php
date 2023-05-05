@@ -334,4 +334,11 @@ class behat_plagiarism_safeassign extends behat_base {
         $csspath = "#safeassign_or_" . $student->id . " a";
         $this->execute("behat_general::i_click_on", array($this->escape($csspath), "css_element"));
     }
+
+    /**
+     * @Given /^I skip because "(?P<reason_string>[^"]*)" \(safeassign\)$/
+     */
+    public function skip_with_reason($reason) {
+        throw new SkippedException($reason);
+    }
 }
